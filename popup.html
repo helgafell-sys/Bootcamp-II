@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Beba Awa</title>
+  <style>
+    body { font-family: sans-serif; width: 200px; padding: 10px; }
+    h4 { margin-top: 0; }
+    label, button { display: block; margin-bottom: 10px; }
+    input { width: 100%; box-sizing: border-box; }
+  </style>
+</head>
+<body>
+  <h4>Configurar Lembrete</h4>
+  <label for="intervalo">Intervalo (minutos):</label>
+  <input type="number" id="intervalo" value="60" min="1" max="120">
+  <button id="salvarBtn">Salvar e Ativar</button>
+  <button id="desativarBtn">Desativar</button>
+  <div id="tempoRestante" style="margin-bottom:10px; color: #0077cc;"></div>
+  <button id="pararAlarmeBtn" style="display:none;">Parar Alarme</button>
+  <label for="volume">Volume:</label>
+  <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+  <audio id="alarmeAudio" src="audio/alarm.mp3"></audio>
+
+  <script src="popup.js"></script>
+  <h5>Obs.: O som do alarme toca somente se o popup estiver aberto quando o lembrete aparecer.</h5>
+  <footer>
+    <p style="font-size: 10px; color: gray; text-align: center;">Desenvolvido por Joao Gabriel</p>
+  </footer>
+</body>
+</html>
