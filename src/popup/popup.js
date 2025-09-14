@@ -16,9 +16,14 @@ function mostrarTempoRestante() {
     if (proximoAlarme) {
       const agora = Date.now();
       let restanteMs = proximoAlarme - agora;
-      if (restanteMs < 0) restanteMs = 0;
+      
+      if (restanteMs < 0) {
+        restanteMs = 0;
+      }
+      
       const minutos = Math.floor(restanteMs / 60000);
       const segundos = Math.floor((restanteMs % 60000) / 1000);
+      
       document.getElementById('tempoRestante').textContent =
         `Tempo restante: ${minutos}m ${segundos}s`;
     } else {
@@ -29,7 +34,9 @@ function mostrarTempoRestante() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  mostrarTempoRestante();
+  // Chamada inicial e depois a cada segundo
+  setInterval(mostrarTempoRestante, 1000);
+
   chrome.storage.local.get(['volume'], ({ volume }) => {
     if (volume !== undefined) {
       volumeInput.value = volume;
