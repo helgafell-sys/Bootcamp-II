@@ -4,16 +4,16 @@
   "version": "1.0",
   "description": "Um lembrete simples para beber água.",
   "icons": {
-    "16": "icons/garrafa-de-agua.png",
-    "32": "icons/garrafa-de-agua.png",
-    "48": "icons/garrafa-de-agua.png",
-    "128": "icons/garrafa-de-agua.png"
+    "16": "src/assets/icons/garrafa-de-agua.png",
+    "32": "src/assets/icons/garrafa-de-agua.png",
+    "48": "src/assets/icons/garrafa-de-agua.png",
+    "128": "src/assets/icons/garrafa-de-agua.png"
   },
   "action": {
     "default_popup": "src/popup/popup.html",
     "default_icon": {
-      "16": "icons/garrafa-de-agua.png",
-      "32": "icons/garrafa-de-agua.png"
+      "16": "src/assets/icons/garrafa-de-agua.png",
+      "32": "src/assets/icons/garrafa-de-agua.png"
     }
   },
   "permissions": ["alarms", "notifications", "storage"],
