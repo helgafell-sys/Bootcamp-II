@@ -10,7 +10,7 @@
     "128": "icons/garrafa-de-agua.png"
   },
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup/popup.html",
     "default_icon": {
       "16": "icons/garrafa-de-agua.png",
       "32": "icons/garrafa-de-agua.png"
@@ -18,6 +18,6 @@
   },
   "permissions": ["alarms", "notifications", "storage"],
   "background": {
-    "service_worker": "service-worker.js"
+    "service_worker": "src/background/service-worker.js"
   }
 }
